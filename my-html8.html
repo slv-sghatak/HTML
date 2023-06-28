@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en-IN">
+    <title>HTML Forms-Draft1</title>
+    <style>
+        body {
+            font-family: "Comic Sans MS";
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 35px;
+        }
+
+        h3 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        input {
+            font-size: 15px;
+        }
+
+        select {
+            font-size: 15px;
+        }
+
+        textarea {
+            font-size: 15px;
+        }
+
+        button {
+            font-size: 15px;
+        }
+
+        output {
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Form Element</h2>
+    <p>Login</p>
+    <form>
+        <label>Email:</label>&#160; &#160; &#160; &#160;
+        <input type="text" /> <br>
+        <label>Password:</label> &#160;
+        <input type="text" />
+    </form>
+
+    <form>
+        <input type="radio" /> &#160;
+        <label>Mickey</label>
+        <input type="radio" /> &#160;
+        <label>Minnie</label>
+        <input type="radio" /> &#160;
+        <label>Pluto</label>
+    </form> <br>
+
+    <form>
+        <input type="radio" /> &#160;
+        <label>Mickey</label> <br />
+        <input type="radio" /> &#160;
+        <label>Minnie</label> <br />
+        <input type="radio" /> &#160;
+        <label>Pluto</label> <br />
+    </form><br />
+
+    <form>
+        <input type="checkbox" id="mickeyCheckbox" />&#160;
+        <label for="mickeyCheckbox">Mickey</label><br />
+        <input type="checkbox" />&#160;
+        <label>Donald</label><br />
+        <input type="checkbox" id="minnieCheckbox" />&#160;
+        <label for="minnieCheckbox">Minnie</label><br />
+        <input type="checkbox" />&#160;
+        <label>Daisy</label>
+    </form><br />
+
+    <p>Submit Button</p>
+    <form action="/my-action_page.php" target="_blank" method="post">
+        <label for="fname">First Name: </label>&#160;
+        <input type="text" id="fname" name="first-name"><br />
+        <input type="submit" value="Click Me!">
+    </form>
+
+    <p>Action attribute omitted!</p>
+    <form autocomplete="on" novalidate="on">
+        <label for="fname2">First Name: </label>&#160;
+        <input type="text" id="fname2" name="first-name"><br />
+        <input type="submit" value="Click Me!">
+    </form>
+
+    <p>Testing the Select Element of Form Element</p>
+    <form>
+        <label for="favoriteStar">Choose a Disney Star, hold Ctrl or Cmd keys to select multiple Stars!</label><br />
+        <select id="favoriteStar" name="disneyStars" size="4" multiple>
+            <option>Mickey</option>
+            <option>Minnie</option>
+            <option id="starPluto" value="pluto" selected>Pluto</option>
+            <option>Donald</option>
+            <option>Daisy</option>
+            <option>Goofy</option>
+        </select>
+    </form>
+
+    <p>Checking textarea form Element</p>
+    <form>
+        <textarea name="aboutPluto" rows="8" cols="100">
+    Disney Pluto Dog was created by Walt Disney Productions in 1930. 
+    He made his debut as a bloodhound in the Mickey Mouse cartoon ‘The Chain Gang.’ 
+    Disney Pluto Dog forms part of the Sensational Six which include Mickey Mouse, Minnie Mouse, Donald Duck, Daisy Duck and Goofy. 
+    These six are the biggest stars in the Disney Universe. Pluto is the only one who is not dressed like a human.
+            </textarea>
+    </form>
+
+    <p>Checking textarea form Element-2</p>
+    <textarea name="aboutPluto" style="width:860px; height:120px;">
+        </textarea>
+
+    <p>Checking button form Element</p>
+    <form>
+        <button type="button" onclick="alert('Hello all our Disney fans!')">Check me out</button>
+    </form>
+
+    <p>Checking fieldset and legend form Elements</p>
+    <form action="/my-action_page.php">
+        <fieldset>
+            <legend>Disney Star Profile</legend>
+            <label for="fname3">FirstName: </label> &#160;
+            <input name="dstarfname" id="fname3" type="text" /> &#160; &#160;
+            <label for="lname">LastName: </label>
+            <input name="dstarlname" id="lname" type="lname" /><br />
+            <label for="bestFriend">Best Disney Friend: </label> &#160;
+            <input name="dstarbfriend" id="bestFriend" type="lname" /><br />
+            <label for="favCol">Favorite Color: </label> &#160;
+            <input name="dstarfavCol" id="favCol" type="text" />
+        </fieldset>
+    </form>
+
+    <p id="datalistColors">Checking datalist form Element</p>
+    <form action="my-action_page.php">
+        <label>Pick a favorite Color of Disney Star</label>
+        <input type="text" list="colors" name="color" />
+        <datalist id="colors">
+            <option id="color1" value="Red"></option>
+            <option value="Pink"></option>
+            <option value="Green"></option>
+            <option value="Blue"></option>
+            <option value="Mauve"></option>
+            <option value="Orange"></option>
+        </datalist>
+    </form>
+
+    <p>Checking output form Element</p>
+    <form action="/my-action_page.php" target="_blank" oninput="z.value = parseInt(x.value) + parseInt(y.value)">
+        0
+        <input name="num1" id="x" type="range" value="70" />100 &#160; + &#160;
+        <input name="num2" id="y" type="number" value="100" /> &#160; = &#160;
+        <output name="z" for="x y"></output><br />
+        <input type="submit" value="Calculate" />
+    </form>
+
+    <h3>HTML Input Types</h3>
+    <p>Input type - Text</p>
+    <form>
+        <label for="name">You are called as:</label> &#160;
+        <input name="userName" id="name" /><br />
+        <label for="age">You have lived for:</label> &#160;
+        <input name="userAge" id="name" /> &#160; years. <br />
+    </form>
+
+    <h3>HTML Input Types</h3>
+    <p>Input type - Text</p>
+    <form>
+        <label for="name">You are called as:</label> &#160;
+        <input name="userName" id="name" /><br />
+        <label for="age">You have lived for:</label> &#160;
+        <input name="userAge" id="name" /> &#160; years.
+    </form>
+
+    <p>Input type - Text and Reset</p>
+    <form>
+        <label for="name">You are called as:</label> &#160;
+        <input name="userName" id="name" value="Pluto Pup" /><br />
+        <label for="age">You have lived for:</label> &#160;
+        <input id="age" name="userAge" value="93" /> &#160; years. <br />
+
+        <input type="reset" />
+    </form>
+
+    <p>Input type - Email & Password</p>
+    <form>
+        <label for="emailID">Email id please:</label>
+        <input type="email" id="emailID" name="userEmail" /><br />
+        <label for="emailPassword">Password: </label> &#160; &#160; &#160; &#160;
+        <input type="password" id="emailPassword" name="userPassword" />
+    </form>
+
+    <p>Input type - Email, Password & Submit</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="emailID">Email id please:</label>
+        <input type="email" id="emailID" name="userEmail" /><br />
+        <label for="emailPassword">Password: </label> &#160; &#160; &#160; &#160;
+        <input type="password" id="emailPassword" name="userPassword" /><br />
+
+        <input type="submit" value="Enter" />
+    </form>
+
+    <p>Input type - Url & Submit</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="webPage">Type in a valid link to a WebPage:</label> &#160;
+        <input type="url" id="webPage" name="url" /><br />
+
+        <input type="submit" name="submitUrl" value="Go" />
+    </form>
+
+    <p>Input type - Radio</p>
+    <form action="my-action_page.php">
+        <label>Choose your favorite Disney Star: </label> <br />
+        <input type="radio" id="favDisneyStar1" name="disneyStar" /> &#160;
+        <label for="favDisneyStar1">Mickey Mouse</label> <br />
+        <input type="radio" id="favDisneyStar2" name="disneyStar" /> &#160;
+        <label for="favDisneyStar2">Minnie Mouse</label> <br />
+        <input type="radio" id="favDisneyStar3" name="disneyStar" /> &#160;
+        <label for="favDisneyStar3">Pluto Pup</label> <br />
+        <input type="radio" id="favDisneyStar4" name="disneyStar" /> &#160;
+        <label for="favDisneyStar4">Donald Duck</label> <br />
+        <input type="radio" id="favDisneyStar5" name="disneyStar" /> &#160;
+        <label for="favDisneyStar5">Daisy Duck</label> <br />
+        <input type="radio" id="favDisneyStar6" name="disneyStar" /> &#160;
+        <label for="favDisneyStar6">Goofy Dog</label> <br />
+    </form>
+
+    <p>Input type - Checkbox</p>
+    <form action="my-action_page.php">
+        <label>Choose All of your favorite Disney Stars: </label> <br />
+        <input type="checkbox" id="favDisneyStars1" name="disneyStar" multiple /> &#160;
+        <label for="favDisneyStars1">Mickey Mouse</label> <br />
+        <input type="checkbox" id="favDisneyStars2" name="disneyStar" multiple /> &#160;
+        <label for="favDisneyStars2">Minnie Mouse</label> <br />
+        <input type="checkbox" id="favDisneyStars3" name="disneyStar" multiple /> &#160;
+        <label for="favDisneyStars3">Pluto Pup</label> <br />
+        <input type="checkbox" id="favDisneyStars4" name="disneyStar" multiple /> &#160;
+        <label for="favDisneyStars4">Donald Duck</label> <br />
+        <input type="checkbox" id="favDisneyStars5" name="disneyStar" multiple /> &#160;
+        <label for="favDisneyStars5">Daisy Duck</label> <br />
+        <input type="checkbox" id="favDisneyStars6" name="disneyStar" multiple /> &#160;
+        <label for="favDisneyStars6">Goofy Dog</label> <br />
+    </form>
+
+    <p>Input type - Color</p>
+    <form action="my-action_page.php">
+        <label for="favCol">Choose the favorite Color of your favorite Disney Star: </label> <br />
+        <input type="color" id="favCol" />
+    </form>
+
+    <p>Input type - Color and Button</p>
+    <form action="my-action_page.php">
+        <label for="favCol">Choose the favorite Color of your favorite Disney Star: </label> <br />
+        <input type="color" id="favCol" /><br />
+
+        <input type="button" name="submitColor" onClick="alert('Thank you for Selecting my favorite Color!')"
+            value="Choose" />
+    </form>
+
+    <p>Input type - Color and Image</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="favColImg">Choose the favorite Color of your favorite Disney Star: </label> <br />
+        <input type="color" id="favColImg" /> &#160; &#160;
+
+        <input type="image" src="/Image_Folder/go.jpg" name="imageButton" style="height:25px; width:40px;" />
+    </form>
+
+    <p>Input type - File and Image</p>
+    <form action="my-action_page.php">
+        <label for="fileUpload">Upload a file: </label> <br />
+        <input type="file" id="fileUpload" /><br /><br />
+
+        <input type="image" src="/Image_Folder/go.jpg" name="imageButton" style="height:25px; width:40px;" />
+    </form>
+
+    <p>Input type - Search and Image(button)</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="findAll">Find: </label> &#160;
+        <input type="search" id="findAll" /> <br /><br />
+
+        <input type="image" src="/Image_Folder/go2.jpg" name="goButton" style="height:40px; width:40px;" />
+    </form>
+
+    <p>Input type - Time and Submit</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="setTime">Set the Time: </label> &#160;
+        <input type="time" id="setTime" name="time" />
+
+        <input type="submit" onClick="alert('Alarm set!')" name="submitTime" value="SET" />
+    </form>
+
+    <p>Input type - Date and Button</p>
+    <form action="my-action_page.php">
+        <label for="newYr">Choose your Native New Year Date: </label><br />
+        <input name="dateNy" type="date" id="newYr" />
+
+        <input type="button" name="submitDate" onClick="alert('Happy New Year!')" value="Select" />
+    </form>
+
+    <p id="maxMin">Input type - Date with max, min Restriction and Button</p>
+    <form action="my-action_page.php">
+        <label for="newYr2">Choose your Native New Year Date: </label><br />
+        <input name="dateNy2" type="date" id="newYr2" max="2023-12-31" min="2023-01-01" />
+
+        <input type="button" name="submitDate" onClick="alert('Happy New Year!')" value="Select" />
+    </form>
+
+    <p>Input type - Date-Time Local and Button</p>
+    <form action="my-action_page.php">
+        <label for="datetimeToday">What is the date and current time? </label><br />
+        <input name="now" type="datetime-local" id="datetimeToday" />
+
+        <input type="button" name="submitDateTime" onClick="alert('We are on - Today, and, That is the time now')"
+            value="Select" />
+    </form>
+
+    <p>Input type - Week and Submit</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="weekCurrent">Find the week of the Year: </label><br />
+        <input name="weekNo" type="week" id="weekCurrent" />
+
+        <input type="submit" name="submitWeek" value="Confirm" />
+    </form>
+
+    <p>Input type - Month and Button</p>
+    <form action="my-action_page.php">
+        <label for="fesMonth">Choose your Main Festival Month: </label><br />
+        <input name="month" type="month" id="fesMonth" />
+
+        <input type="button" name="month" onClick="alert('Best Wishes to Enjoy your Celebration to the Fullest!!')"
+            value="Go" />
+    </form>
+
+    <p>Input type - Number and Submit</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="disneyStarAge">Age in years Please?</label><br />
+        <input type="number" id="disneyStarAge" name="dstarAge" />
+
+        <input type="submit" name="submitAge" value="Enter" />
+    </form>
+
+    <p>Input type - Range and Submit</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="friendCount">How many friends you have?</label><br />
+        0 <input type="range" id="friendCount" name="friendsNo" /> 100 <br />
+
+        <input type="submit" name="submitFriendsNo" value="Confirm" />
+    </form>
+
+    <p id="contactNo">Input type - Tel</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="callAt">Call me @: </label> &#160;
+        <input type="tel" id="callAtt" name="hello" placeholder="01234-56789" pattern="[0-9]{5}-[0-9]{5}" /> &#160;
+
+        <input type="submit" name="submitFriendsNo" value="Hello" />
+    </form>
+
+    <p>Input type - Text, Hidden (Note: Not to be used for Confidentiality) and Submit</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="disneyStarName">Enter Name: </label>
+        <input type="text" id="disneyStarName" name="dSName" />
+        <input type="hidden" id="disneyStarId" name="dStarId" value="001" /><br />
+
+        <input type="submit" value="Confirm" />
+    </form>
+
+    <h3>Input Restrictions</h3>
+    <p>Attribute - checked with Input type Radio</p>
+    <form action="my-action_page.php">
+        <label>Choose your favorite Disney Star: </label> <br/>
+
+        <input type="radio" id="favDisneyStar7" name="disneyStar" /> &#160;
+        <label for="favDisneyStar7">Mickey Mouse</label> <br/>
+
+        <input type="radio" id="favDisneyStar8" name="disneyStar" /> &#160;
+        <label for="favDisneyStar8">Minnie Mouse</label> <br/>
+
+        <input type="radio" id="favDisneyStar9" name="disneyStar" /> &#160;
+        <label for="favDisneyStar9">Pluto Pup</label> <br/>
+
+        <input type="radio" id="favDisneyStar10" name="disneyStar" /> &#160;
+        <label for="favDisneyStar10">Donald Duck</label> <br/>
+
+        <input type="radio" id="favDisneyStar11" name="disneyStar" checked /> &#160;
+        <label for="favDisneyStar11">Daisy Duck</label> <br/>
+
+        <input type="radio" id="favDisneyStar12" name="disneyStar" /> &#160;
+        <label for="favDisneyStar12">Goofy Dog</label> <br/>
+
+    </form>
+
+    <p>Attribute - checked with Input type Checkbox</p>
+   <!--Note the difference of singular & plural in the values for id attribute of input field between the above and the below example:--> 
+    <form action="my-action_page.php">
+        <label>Choose All of your favorite Disney Stars: </label> <br />
+        <input type="checkbox" id="favDisneyStars7" name="disneyStar" multiple /> &#160;
+        <label for="favDisneyStars7">Mickey Mouse</label> <br />
+        <input type="checkbox" id="favDisneyStars8" name="disneyStar" multiple /> &#160;
+        <label for="favDisneyStars8">Minnie Mouse</label> <br />
+        <input type="checkbox" id="favDisneyStars9" name="disneyStar" checked multiple /> &#160;
+        <label for="favDisneyStars9">Pluto Pup</label> <br />
+        <input type="checkbox" id="favDisneyStars10" name="disneyStar" multiple /> &#160;
+        <label for="favDisneyStars10">Donald Duck</label> <br />
+        <input type="checkbox" id="favDisneyStars11" name="disneyStar" multiple /> &#160;
+        <label for="favDisneyStars11">Daisy Duck</label> <br />
+        <input type="checkbox" id="favDisneyStars12" name="disneyStar" multiple /> &#160;
+        <label for="favDisneyStars12">Goofy Dog</label> <br />
+    </form>
+<!--Here in case of most examples, value for the name attribute is not chosen with particular attention mainly to reduce confusion of name and id attributes sharing same values. But when making a website dynamic with Javascript, considering the value of name attribute will become necessary.-->
+    <p>Attribute - multiple with Email</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="emailIDs">You may enter all your Email ids here: </label>
+        <input type="email" id="emailIDs" name="userEmailIds" size="100" multiple/><br/>
+
+        <input type="submit" name="submitUserEmailIds" value="Enter"/>
+    </form>
+
+    <p>Attribute - disabled with Input type submit</p>
+    <form action="my-action_page.php" target="_blank"> <!--The action and target attribute does not have any role for this example since the button is disabled. They are just included as a good coding practice.-->
+        <label for="fname4">First Name: </label> &#160;
+        <input type="text" id="fname4" name="userFirstName"/><br/>
+
+        <label for="lname2">Last Name: </label> &#160;
+        <input type="text" id="lname2" name="userLastName"/><br/>
+
+        <label for="meeting">Book meeting with your favorite Disney Star: </label> &#160;
+        <input type="submit" id="meeting" name="meeting" value="Book Meeting" disabled />
+    </form>
+
+    <p>Attribute - disabled with Input type text</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="fname4">First Name: </label> &#160;
+        <input type="text" id="fname4" name="userFirstName"/><br/>
+
+        <label for="lname2">Last Name: </label> &#160;
+        <input type="text" id="lname2" name="userLastName" value="Duck" disabled/><br/>
+
+        <label for="meeting">Book meeting with your favorite Disney Star: </label> &#160;
+        <input type="submit" id="meeting" name="meeting" value="Book Meeting" />
+    </form>
+
+    <p>Attributes - max, min with Input type date <br />
+        <span style="font-size: 15px;">Click on the following link to checkout example:</span> <br />
+        <a href="#maxMin" style="font-size: 15px;">Input type Date with max, min Restriction and Button</a>
+    </p>
+    <!--Examples To be added for Attributes - max, min with other Input types are as follows: -->
+    <p>Attributes - max, min with Input type number</p>
+
+    <p>Attributes - max, min with Input type range</p>
+
+    <p>Attributes - max, min with Input type time</p>
+
+    <p>Attributes - max, min with Input type datetime-local</p> <!--Little doubt about how can it be applicable for datetime-local? Ans to my doubt: since datetime-local allows to enter date and time values other than current time and date-->
+
+    <p>Attributes - max, min with Input type week</p>
+
+    <p>Attributes - max, min with Input type month</p>
+
+    <p>Attributes - max, min with Input type number</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="favNum">Choose a favorite number above 50 and below 100: </label>
+        <input type="number" id="favNum" name="num" min="51" max="99" /> &#160;
+
+        <input type="submit" name="submitNum" />
+    </form>
+
+    <p>Attributes - pattern with Input type tel <br />
+        <span style="font-size: 15px;">Click on the following link to checkout example:</span> <br />
+        <a href="#contactNo" style="font-size: 15px;">Input type - Tel</a>
+    </p>
+
+    <p>Attribute - maxlength with Input type text</p>
+    <form action="my-action_page.php">
+        <input type="text" style="width:400px; height:20px;" maxlength="64" />
+    </form>
+
+    <p>Attributes - size with Input type text</p>
+    <form action="my-action_page.php">
+        <input type="text" style="height:20px;" size="2" />
+    </form>
+
+    <p>Attributes - readonly with Input type text</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="fname5">First Name: </label> &#160;
+        <input type="text" id="fname5" name="fname" value="Pluto" readonly><br />
+
+        <label for="lname5">First Name: </label> &#160;
+        <input type="text" id="lname5" name="lname" value="Pup"><br />
+
+        <input type="submit" name="fullName" value="Submit" />
+    </form>
+
+    <p>Attributes - required with Input type text</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="fname6">First Name: </label> &#160;
+        <input type="text" id="fname6" name="fname6" value="Pluto" required><br />
+
+        <label for="lname6">First Name: </label> &#160;
+        <input type="text" id="lname6" name="lname6" value="Pup"><br />
+
+        <input type="submit" name="fullName" value="Submit" />
+    </form>
+
+    <p>Attributes - step with Input type number</p>
+    <form action="my-action_page.php" target="_blank">
+        <label for="purchaseButter">Butter Block size: </label>
+        <input type="number" id="purchaseButter" name="butter" step="50" min="50" max="1000" /> &#160; grams. <br />
+
+        <input type="submit" name="submitButter" value="Buy" />
+    </form>
+
+    <p>Attributes - value<br />
+        <span style="font-size: 15px;">Check out the following links all of which explains the utility of value
+            attribute of input element:
+        </span>
+    <ul>
+        <li><a href="#purchaseButter">Attribute value as customized name for a Button</a></li>
+        <li><a href="#fname6">Attribute value as default value for required Field(s)</a></li>
+        <li><a href="#fname5">Attribute value as default value for readonly Field(s)</a></li>
+        <li><a href="#datalistColors">Attribute value as to set values for datalist form Element </a></li>
+        <li><a href="#starPluto">Attribute value to set <b>customized</b> default value for a drop-down list </a></li>
+    </ul>
+
+    <span style="font-size: 15px;">Above are some of the uses of value attribute of input form Element that have been used in different 
+        examples so far.
+    </span>
+
+
+    </p>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
