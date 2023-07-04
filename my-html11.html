@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            font-family: "Comic Sans MS";
+            background-color: rgb(127, 194, 236);
+            font-size: 15px;
+        }
+        h3 {
+            font-size: 35px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Inserting a video on website using Basic Video tag</h3>
+    <video width="400" height="200" controls>
+        <source src="" type="video/mp4" />
+        <source src="" type="video/ogg" />
+    </video>
+
+    <h3>Inserting a video on website using Autoplay feature </h3>
+    <video width="400" height="200" controls autoplay>
+        <source src="" type="video/mp4" />
+        <source src="" type="video/ogg" />
+    </video>
+
+    <h3>Inserting a video on website using Autoplay that is muted</h3>
+    <video width="400" height="200" controls autoplay muted>
+        <source src="" type="video/mp4" />
+        <source src="" type="video/ogg" />
+    </video>
+
+    <h3>Inserting a video on website using Javascript functions for additional functionalities</h3>
+    <div style="text-align:center;">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="small()">Small Screen</button>
+        <button onclick="regular()">Regular Screen</button>
+        <button onclick="large()">Large Screen</button> <br /><br />
+
+        <video id="video4" width="400" height="200" controls>
+            <source src="" type="video/mp4" />
+            <source src="" type="video/ogg" />
+        </video>
+    </div>
+
+
+    <script>
+        var fourthVideo = document.getElementById("video4")
+        function playPause() {
+            if (fourthVideo.paused)
+                fourthVideo.play();
+            else
+                fourthVideo.pause();
+        }
+        function small() {
+            fourthVideo.width = ;
+            fourthVideo.height = ;
+        }
+        function regular() {
+            fourthVideo.width = ;
+            fourthVideo.height = ;
+        }
+        function large() {
+            fourthVideo.width = ;
+            fourthVideo.height = ;
+        }
+    </script>
+
+    <p>Video References: &#160;<a href="">Minnie Mouse ClubHouse</a></p>
+
+    <h3>Inserting a basic Audio File on WebPage</h3>
+    <audio controls>
+        <source src="" type="audio/mpeg" />
+        <source src="" type="audio/ogg" />
+    </audio>
+
+    <h3>Inserting an Audio File on WebPage with Autoplay feature</h3>
+    <audio controls autoplay>
+        <source src="" type="audio/mpeg" />
+        <source src="" type="audio/ogg" />
+    </audio>
+
+    <h3>Inserting an Audio File on WebPage with Muted and Autoplay features</h3>
+    <audio controls autoplay muted>
+        <source src="" type="audio/mpeg" />
+        <source src="" type="audio/ogg" />
+    </audio>
+</body>
+<!--Need a mp4 video on computer to complete this code and check on Website-->
+
+<h3>HTML Plug-ins</h3>
+
+<p>The object element</p>
+<object width="800" height="400" data="/HTML_for_Website/my-html12.html"></object>
+
+<p>Embedding images in the object element</p>
+<object width="250" height="500" data="/Image_Folder/DaisyDuck.jpg"></object>
+<!--data Attribute vs. href and src attributes-->
+<!--Mention: that relative links/url also works for the data attribute-->
+
+<h3>The embed element - for Images</h3>
+<embed src="/Image_Folder/Donald.jpg" width="250" height="400" />
+<!--Limitation of embed element w.r.t. img tag is: embed element do not have the provision to contain alternate text.-->
+
+<h3>The embed element - for html or other Webpages</h3>
+<embed width="800" height="250" src="/HTML_for_Website/my-html4.html" />
+<!--src can have absolute path or relative path as its value just alike data attribute of object element.-->
+<!--Difference of object element and embed element: data attribute for object and src for embed. Make a html table to write this.-->
+
+</html>
